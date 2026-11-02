@@ -6,7 +6,7 @@ GitHub Repository: https://github.com/chanwanwen/LAB-REPORT-2
 Live App: https://lab-report-2-6hwucpwohjorxbptkrbzst.streamlit.app/
 
 **About**
-
+***
 This project is an interactive Streamlit application that implements a Genetic Algorithm (GA) to solve a binary pattern optimisation problem.
 
 The objective is to find an 80-bit chromosome containing exactly 50 ones. The algorithm follows the assignment requirements, using a population of 300 individuals and evolving them over 50 generations.
@@ -14,7 +14,7 @@ The objective is to find an 80-bit chromosome containing exactly 50 ones. The al
 The fitness function assigns a maximum score of 80 when a chromosome contains exactly 50 ones. The application allows users to explore different selection and crossover methods and observe how the population evolves over generations.
 
 **Key Features**
-
+***
 - Fixed assignment parameters: Population size (300), chromosome length (80), target number of ones (50), maximum fitness (80), and 50 generations.
 - Three selection methods: Tournament, Roulette Wheel, and Rank-based selection.
 - Three crossover methods: One-point, Two-point, and Uniform crossover.
@@ -26,10 +26,11 @@ The fitness function assigns a maximum score of 80 when a chromosome contains ex
 - CSV export: Allows users to download generation statistics for further analysis.
 
 **MAIN APPLICATION**
+***
 <img width="1068" height="427" alt="image" src="https://github.com/user-attachments/assets/16247628-3a79-484b-9b0e-4406f8efb59e" />
 
 **How to Use the Application**
-
+***
 1. Open the Streamlit application.
 2. Select a preferred selection method (Tournament, Roulette Wheel, or Rank-based).
 3. Select a crossover method (One-point, Two-point, or Uniform).
@@ -40,7 +41,7 @@ The fitness function assigns a maximum score of 80 when a chromosome contains ex
 8. View or download the generation statistics in CSV format.
 
 **How the Genetic Algorithm Works**
-
+***
 The application follows these main steps:
 1. **Population Initialisation**: Generate 300 random binary chromosomes, each containing 80 bits.
 2. **Fitness Evaluation**: Calculate the fitness of each chromosome based on the difference between its number of ones and the target value of 50.
@@ -51,7 +52,7 @@ The application follows these main steps:
 7. **Termination**: Repeat the process until all 50 generations have been completed and return the best chromosome found.
 
 **Built With**
-
+***
 - Python – Main programming language.
 - Streamlit – Interactive web application interface.
 - NumPy – Binary chromosome operations and numerical calculations.
@@ -60,10 +61,12 @@ The application follows these main steps:
 
 
 **RESULTS AND FITNESS CONVERGENCE**
+***
 <img width="857" height="269" alt="image" src="https://github.com/user-attachments/assets/71ab6098-0082-4cf0-aae7-78d6bd6aa1ee" />
 <img width="839" height="432" alt="image" src="https://github.com/user-attachments/assets/476ea8d7-a234-4f23-80db-38f8e16eaa21" />
 
 **FINAL POPULATION DISTRIBUTION**
+***
 <img width="1487" height="773" alt="image" src="https://github.com/user-attachments/assets/08d71171-5229-49b8-8fc9-70af41760ad4" />
 
 
@@ -87,7 +90,7 @@ Fitness evaluation requires examining each chromosome's bits across all generati
 Based on the assignment parameters:
 50 × 300 × 80 = 1,200,000 bit evaluations
 
-**Space Complexity****:**
+**Space Complexity: **
 
 O(P × L + G)
 
