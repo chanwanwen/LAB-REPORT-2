@@ -28,6 +28,28 @@ The fitness function assigns a maximum score of 80 when a chromosome contains ex
 **MAIN APPLICATION**
 <img width="1068" height="427" alt="image" src="https://github.com/user-attachments/assets/16247628-3a79-484b-9b0e-4406f8efb59e" />
 
+**How to Use the Application**
+
+1. Open the Streamlit application.
+2. Select a preferred selection method (Tournament, Roulette Wheel, or Rank-based).
+3. Select a crossover method (One-point, Two-point, or Uniform).
+4. Adjust the crossover rate and mutation rate if needed.
+5. Set a random seed to make the experiment reproducible.
+6. Click Run Genetic Algorithm to start the optimisation process.
+7. Review the best chromosome, fitness convergence graph, and final population distribution.
+8. View or download the generation statistics in CSV format.
+
+**How the Genetic Algorithm Works**
+
+The application follows these main steps:
+1. **Population Initialisation**: Generate 300 random binary chromosomes, each containing 80 bits.
+2. **Fitness Evaluation**: Calculate the fitness of each chromosome based on the difference between its number of ones and the target value of 50.
+3. **Selection**: Select parent chromosomes using Tournament, Roulette Wheel, or Rank-based selection.
+4. **Crossover**: Combine two parent chromosomes using One-point, Two-point, or Uniform crossover.
+5. **Mutation**: Randomly flip selected bits from 0 to 1 or from 1 to 0 based on the mutation rate.
+6. **Elitism**: Preserve the best chromosome from the current generation by copying it into the next generation.
+7. **Termination**: Repeat the process until all 50 generations have been completed and return the best chromosome found.
+
 **RESULTS AND FITNESS CONVERGENCE**
 <img width="857" height="269" alt="image" src="https://github.com/user-attachments/assets/71ab6098-0082-4cf0-aae7-78d6bd6aa1ee" />
 <img width="839" height="432" alt="image" src="https://github.com/user-attachments/assets/476ea8d7-a234-4f23-80db-38f8e16eaa21" />
