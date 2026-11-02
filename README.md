@@ -50,6 +50,15 @@ The application follows these main steps:
 6. **Elitism**: Preserve the best chromosome from the current generation by copying it into the next generation.
 7. **Termination**: Repeat the process until all 50 generations have been completed and return the best chromosome found.
 
+**Built With**
+
+- Python – Main programming language.
+- Streamlit – Interactive web application interface.
+- NumPy – Binary chromosome operations and numerical calculations.
+- Pandas – Generation statistics and CSV export.
+- Matplotlib – Fitness convergence and population distribution visualisations.
+
+
 **RESULTS AND FITNESS CONVERGENCE**
 <img width="857" height="269" alt="image" src="https://github.com/user-attachments/assets/71ab6098-0082-4cf0-aae7-78d6bd6aa1ee" />
 <img width="839" height="432" alt="image" src="https://github.com/user-attachments/assets/476ea8d7-a234-4f23-80db-38f8e16eaa21" />
@@ -60,3 +69,34 @@ The application follows these main steps:
 
 <img width="1417" height="725" alt="image" src="https://github.com/user-attachments/assets/a90111ef-f0d6-4eb1-8a7d-afbd0510e35c" />
 <img width="1482" height="705" alt="image" src="https://github.com/user-attachments/assets/7e8ba767-8e1d-45d8-9550-727ea25f5600" />
+
+**Complexity Analysis**
+
+Let:
+- G = Number of generations (50)
+- P = Population size (300)
+- L = Chromosome length (80)
+
+**Time Complexity:**
+
+The time complexity is approximately:
+
+O(G × P × L)
+
+Fitness evaluation requires examining each chromosome's bits across all generations.
+Based on the assignment parameters:
+50 × 300 × 80 = 1,200,000 bit evaluations
+
+**Space Complexity****:**
+
+O(P × L + G)
+
+The population requires O(P × L) space, while generation statistics require additional O(G) space.
+
+For this experiment, the population contains 300 chromosomes with 80 bits each.
+
+**Reproducibility**
+
+A random seed is used to control the random number generation process. Running the application with the same seed and identical algorithm settings produces the same results.
+
+The application also allows users to experiment with different selection methods, crossover methods, crossover rates, and mutation rates to observe their effects on the optimisation process.
