@@ -3,6 +3,7 @@ LAB REPORT 2 | CHAN WAN WEN | SD24059
 Genetic Algorithm: Binary Pattern Optimisation
 
 GitHub Repository: https://github.com/chanwanwen/LAB-REPORT-2
+
 Live App: https://lab-report-2-6hwucpwohjorxbptkrbzst.streamlit.app/
 
 **About**
