@@ -135,7 +135,7 @@ Fitness evaluation requires examining each chromosome's bits across all generati
 Based on the assignment parameters:
 50 × 300 × 80 = 1,200,000 bit evaluations
 
-**Space Complexity: **
+**Space Complexity:**
 
 O(P × L + G)
 
