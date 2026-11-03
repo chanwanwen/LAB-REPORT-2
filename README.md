@@ -25,6 +25,29 @@ The fitness function assigns a maximum score of 80 when a chromosome contains ex
 - Generation statistics: Provides a table containing fitness and population information for each generation.
 - CSV export: Allows users to download generation statistics for further analysis.
 
+**Code Overview**
+***
+
+The application is organised into several sections, each responsible for a different stage of the Genetic Algorithm and its Streamlit interface.
+
+| Function / Section | Description |
+|---|---|
+| `fitness()` | Calculates the fitness score based on the difference between the chromosome's number of ones and the target of 50. |
+| `init_population()` | Generates the initial population of 300 random binary chromosomes, each containing 80 bits. |
+| `tournament_selection()` | Selects the chromosome with the highest fitness from randomly selected candidates. |
+| `calculate_selection_probabilities()` | Calculates selection probabilities for Roulette Wheel and Rank-based selection. |
+| `select_parent()` | Selects a parent chromosome using the selected selection method. |
+| `one_point_crossover()` | Creates offspring by exchanging chromosome segments at one crossover point. |
+| `two_point_crossover()` | Creates offspring by exchanging chromosome segments between two crossover points. |
+| `uniform_crossover()` | Creates offspring by selecting individual bits from either parent using a random mask. |
+| `apply_crossover()` | Applies the selected crossover method according to the crossover rate. |
+| `mutate()` | Performs bit-flip mutation by changing selected bits from 0 to 1 or from 1 to 0. |
+| `run_genetic_algorithm()` | Executes the GA process, including initialization, fitness evaluation, selection, crossover, mutation, elitism and generation tracking. |
+
+### Streamlit Interface
+
+The Streamlit interface allows users to configure and execute the Genetic Algorithm. It displays the best chromosome, fitness score, number of ones and zeros, fitness convergence graph, and final population distribution. Users can also view generation statistics and download them as a CSV file.
+
 **MAIN APPLICATION**
 ***
 <img width="1068" height="427" alt="image" src="https://github.com/user-attachments/assets/16247628-3a79-484b-9b0e-4406f8efb59e" />
