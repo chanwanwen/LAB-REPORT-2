@@ -25,6 +25,28 @@ The fitness function assigns a maximum score of 80 when a chromosome contains ex
 - Generation statistics: Provides a table containing fitness and population information for each generation.
 - CSV export: Allows users to download generation statistics for further analysis.
 
+**How to Use the Application**
+***
+1. Open the Streamlit application.
+2. Select a preferred selection method (Tournament, Roulette Wheel, or Rank-based).
+3. Select a crossover method (One-point, Two-point, or Uniform).
+4. Adjust the crossover rate and mutation rate if needed.
+5. Set a random seed to make the experiment reproducible.
+6. Click Run Genetic Algorithm to start the optimisation process.
+7. Review the best chromosome, fitness convergence graph, and final population distribution.
+8. View or download the generation statistics in CSV format.
+
+**How the Genetic Algorithm Works**
+***
+The application follows these main steps:
+1. **Population Initialisation**: Generate 300 random binary chromosomes, each containing 80 bits.
+2. **Fitness Evaluation**: Calculate the fitness of each chromosome based on the difference between its number of ones and the target value of 50.
+3. **Selection**: Select parent chromosomes using Tournament, Roulette Wheel, or Rank-based selection.
+4. **Crossover**: Combine two parent chromosomes using One-point, Two-point, or Uniform crossover.
+5. **Mutation**: Randomly flip selected bits from 0 to 1 or from 1 to 0 based on the mutation rate.
+6. **Elitism**: Preserve the best chromosome from the current generation by copying it into the next generation.
+7. **Termination**: Repeat the process until all 50 generations have been completed and return the best chromosome found.
+
 **Code Overview**
 ***
 
@@ -52,27 +74,28 @@ The Streamlit interface allows users to configure and execute the Genetic Algori
 ***
 <img width="1068" height="427" alt="image" src="https://github.com/user-attachments/assets/16247628-3a79-484b-9b0e-4406f8efb59e" />
 
-**How to Use the Application**
-***
-1. Open the Streamlit application.
-2. Select a preferred selection method (Tournament, Roulette Wheel, or Rank-based).
-3. Select a crossover method (One-point, Two-point, or Uniform).
-4. Adjust the crossover rate and mutation rate if needed.
-5. Set a random seed to make the experiment reproducible.
-6. Click Run Genetic Algorithm to start the optimisation process.
-7. Review the best chromosome, fitness convergence graph, and final population distribution.
-8. View or download the generation statistics in CSV format.
+**Installation and Setup**
 
-**How the Genetic Algorithm Works**
+Follow these steps to run the application locally.
+
+**1. Clone the Repository**
 ***
-The application follows these main steps:
-1. **Population Initialisation**: Generate 300 random binary chromosomes, each containing 80 bits.
-2. **Fitness Evaluation**: Calculate the fitness of each chromosome based on the difference between its number of ones and the target value of 50.
-3. **Selection**: Select parent chromosomes using Tournament, Roulette Wheel, or Rank-based selection.
-4. **Crossover**: Combine two parent chromosomes using One-point, Two-point, or Uniform crossover.
-5. **Mutation**: Randomly flip selected bits from 0 to 1 or from 1 to 0 based on the mutation rate.
-6. **Elitism**: Preserve the best chromosome from the current generation by copying it into the next generation.
-7. **Termination**: Repeat the process until all 50 generations have been completed and return the best chromosome found.
+git clone https://github.com/chanwanwen/LAB-REPORT-2.git
+
+**Repository Structure**
+***
+
+LAB-REPORT-2/
+│
+├── app.py
+├── requirements.txt
+├── README.md
+│
+└── image/
+    ├── Main_page.png
+    ├── Results.png
+    ├── Fitness_Convergence.png
+    └── Final_Population.png
 
 **Built With**
 ***
@@ -81,7 +104,6 @@ The application follows these main steps:
 - NumPy – Binary chromosome operations and numerical calculations.
 - Pandas – Generation statistics and CSV export.
 - Matplotlib – Fitness convergence and population distribution visualisations.
-
 
 **RESULTS AND FITNESS CONVERGENCE**
 ***
